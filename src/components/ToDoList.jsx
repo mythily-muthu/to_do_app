@@ -1,11 +1,14 @@
 import React from "react";
+import { useTodoContext } from "../Provider/ToDoProvider";
 
 const ToDoList = () => {
-  let {} = useTodoContext();
+  let { todoList } = useTodoContext();
 
   return (
     <ul>
-      <li></li>
+      {todoList.map((todo, index) => (
+        <li key={index}>todo</li>
+      ))}
     </ul>
   );
 };
