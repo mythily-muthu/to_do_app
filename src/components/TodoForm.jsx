@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTodoContext } from "../Provider/ToDoProvider";
 
 const TodoForm = () => {
-  let { getNumberofTodoItems, addTodo } = useTodoContext();
+  let { getNumberOfTodoItems, addTodo } = useTodoContext();
   let [todoItem, setTodoItem] = useState("");
 
   let handleSubmit = (e) => {
@@ -19,7 +19,7 @@ const TodoForm = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <h4>Number of todo items: {getNumberofTodoItems()}</h4>
+      <h4>Number of todo items: {getNumberOfTodoItems()}</h4>
       <input
         className="input"
         type="text"
