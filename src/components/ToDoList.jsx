@@ -2,14 +2,20 @@ import React from "react";
 import { useTodoContext } from "../Provider/ToDoProvider";
 
 const ToDoList = () => {
-  let { todoList } = useTodoContext();
+  let { todoList, removeTodo } = useTodoContext();
 
   return (
-    <ul>
+    <div className="list">
       {todoList.map((todo, index) => (
-        <li key={index}>{todo}</li>
+        <li key={index}>
+          {todo}
+
+          <button onClick={() => removeTodo(index)} className="delete">
+            x
+          </button>
+        </li>
       ))}
-    </ul>
+    </div>
   );
 };
 

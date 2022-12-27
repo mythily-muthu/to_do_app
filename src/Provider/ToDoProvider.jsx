@@ -7,8 +7,22 @@ let initialTodoListState = ["read the book"];
 const ToDoProvider = ({ children }) => {
   let [todoList, setTodoList] = useState(initialTodoListState);
 
+  let getNumberOfTodoItems = () => todoList.length;
+
+  let addTodo = (newTodoItem) => {
+    setTodoList([...todoList, newTodoItem]);
+  };
+
+  let removeTodo = (todoIndex) => {
+    let newList = todoList.filter((_, index) => index !== todoIndex);
+    setTodoList(newList);
+  };
+
   let contextValue = {
     todoList,
+    getNumberOfTodoItems,
+    addTodo,
+    removeTodo,
   };
 
   return (
