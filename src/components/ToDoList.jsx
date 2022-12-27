@@ -7,7 +7,7 @@ const ToDoList = () => {
   return (
     <ul>
       {todoList.map((todo, index) => (
-        <li key={index}>todo</li>
+        <li key={index}>{todo}</li>
       ))}
     </ul>
   );

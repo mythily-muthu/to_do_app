@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(201, 238, 164, 0.73);
+  background-image: linear-gradient(to right, #e66465, #9198e5);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,4 +7,7 @@ body {
   justify-content: center;
   display: flex;
   margin-top: 10vh;
+  font-weight: 500;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: larger;
 }

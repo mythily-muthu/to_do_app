@@ -11,7 +11,9 @@ const ToDoProvider = ({ children }) => {
     todoList,
   };
 
-  return <ToDoContext.Provider value={{}}>{children}</ToDoContext.Provider>;
+  return (
+    <ToDoContext.Provider value={contextValue}>{children}</ToDoContext.Provider>
+  );
 };
 
 export let useTodoContext = () => useContext(ToDoContext);
